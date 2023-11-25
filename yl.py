@@ -158,7 +158,7 @@ def main(baseurl):
     lon2 = 2
     # os.system("rm -r /tmp/.org.chromium*")
     # os.chdir("b")
-    f = open("turkish.txt")
+    f = open("word.txt")
     wo = f.read()
     f.close()
     email = 'elenee.space@gmail.com'
