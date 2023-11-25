@@ -183,11 +183,12 @@ def main(baseurl):
 
 
 os.system('/bin/bash -c "echo kali| sudo -S openvpn us-orl.prod.surfshark.com_udp.ovpn &"')
-xz = input('input city:')
+#xz = input('input city:')
 #input("input yelp search such as cafe:")
 #input("input yelp email to input:")
 #input("input yelp name to input:")
 # xz = sys.argv[1]
+xz = sys.argv[1]
 f = open(xz+'.txt',"r")
 cities = f.read().split('\n')
 f.close()
