@@ -322,9 +322,9 @@ def c(cc,url):
     return html, cc
 def cx():
     os.system("rm -r /tmp/.org.chromium*")
-    os.system('/bin/bash -c "echo toor| sudo -S pkill openvpn &"')
+    os.system('/bin/bash -c "echo kali| sudo -S pkill openvpn &"')
     time.sleep(2)
-    os.system('/bin/bash -c "echo toor| sudo -S openvpn us-sjc.prod.surfshark.com_udp.ovpn &"')
+    os.system('/bin/bash -c "echo kali| sudo -S openvpn us-orl.prod.surfshark.com_udp.ovpn &"')
     time.sleep(30)
 
 def main(baseurl):
@@ -389,13 +389,15 @@ def main(baseurl):
 #             rt = False
 #         count = count + 1
 
-os.chdir("b")
-xz = input('input cities: \nExample    "las vegas,NV":"city,state":"seattle,WA"\n')
+xz = input('input city:')
 input("input yelp search such as cafe:")
 input("input yelp email to input:")
 input("input yelp name to input:")
 # xz = sys.argv[1]
-cities = xz.split(":")
+f = open(xz+'.txt',"r")
+cities = f.read().split('\n')
+f.close()
+#cities = xz.split("\n")
 xrl = "https://www.yelp.com/search?find_desc=cafe&find_loc="
 input("  =======================================================")
 for xc in cities:
