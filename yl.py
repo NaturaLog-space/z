@@ -182,6 +182,7 @@ def main(baseurl):
         count = count + 1
 
 xz = input('input city:')
+cx()
 #input("input yelp search such as cafe:")
 #input("input yelp email to input:")
 #input("input yelp name to input:")
