@@ -192,7 +192,7 @@ cities = f.read().split('\n')
 f.close()
 #cities = xz.split("\n")
 xrl = "https://www.yelp.com/search?find_desc=cafe&find_loc="
-input("  =======================================================")
+#input("  =======================================================")
 for xc in cities:
     try:
         main(xrl+xc)
