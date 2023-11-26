@@ -195,7 +195,7 @@ cv()
 xy = int(sys.argv[1])
 xzz = [40,80,120,160,200,240,280,320,340,380,420]+xy
 for xz in xzz:
-  f = open(xz+'.txt',"r")
+  f = open(str(xz)+'.txt',"r")
   cities = f.read().split('\n')
   f.close()
   #cities = xz.split("\n")
