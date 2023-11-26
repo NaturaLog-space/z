@@ -134,7 +134,7 @@ def c(cc,url):
     cc.get(url)
     html = cc.page_source
     print(len(html))
-    while (len(html)<7000) or :
+    while (len(html)<7000):
         cc.close()
         # options = Options()
         # options.add_argument("--headless=new")
