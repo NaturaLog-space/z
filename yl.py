@@ -204,8 +204,8 @@ for xc in cities:
         main(xrl+xc)
         # print(xrl+xc)
     except:
-        f = open("e.txt","a")
-        f.write(xc)
+        f = open("e{}.txt".format(xz),"a")
+        f.write(xc+'\n')
         f.close()
         print(xc)
         cx()
