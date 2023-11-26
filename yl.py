@@ -10,6 +10,8 @@ from datetime import date
 import requests
 import os 
 import sys
+import random
+
 
 def sendmsg(cc,data,words,email,name):
     urls = data['businessUrl']
@@ -132,7 +134,7 @@ def c(cc,url):
     cc.get(url)
     html = cc.page_source
     print(len(html))
-    while(len(html)<7000):
+    while (len(html)<7000) or :
         cc.close()
         # options = Options()
         # options.add_argument("--headless=new")
