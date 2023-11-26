@@ -205,6 +205,7 @@ for xc in cities:
         # print(xrl+xc)
     except:
         print(xc)
+        cx()
 print("finish")
 
 
