@@ -58,7 +58,7 @@ def sendmsg(cc,data,words,email,name):
                 if cz==True:
                     data['isAd'][x]=True
                 if et == True:
-                    cx()
+                    cv()
             # data.loc[:('isAd',x)] = True
             except:
                 data['isAd'][x]=False
@@ -139,20 +139,20 @@ def c(cc,url):
         # options = Options()
         # options.add_argument("--headless=new")
         # cc = webdriver.Chrome(options=options)
-        cx()
+        cv()
         cc = webdriver.Chrome()        
         # time.sleep(30)
         cc.get(url)
         html = cc.page_source
     return html, cc
-def cx():
+def cv():
     vx = ["us-orl.prod.surfshark.com_udp.ovpn","us-phx.prod.surfshark.com_tcp.ovpn","us-phx.prod.surfshark.com_udp.ovpn","us-sea.prod.surfshark.com_tcp.ovpn","us-sea.prod.surfshark.com_udp.ovpn","us-sfo.prod.surfshark.com_tcp.ovpn","us-sfo.prod.surfshark.com_udp.ovpn","us-sjc.prod.surfshark.com_tcp.ovpn","us-sjc.prod.surfshark.com_udp.ovpn","us-slc.prod.surfshark.com_tcp.ovpn","us-slc.prod.surfshark.com_udp.ovpn","us-stl.prod.surfshark.com_tcp.ovpn","us-stl.prod.surfshark.com_udp.ovpn","us-tpa.prod.surfshark.com_tcp.ovpn","us-tpa.prod.surfshark.com_udp.ovpn"]
     rnd = random.randint(0,len(vx)-1)
     os.system("rm -r /tmp/.org.chromium*")
     os.system('/bin/bash -c "echo kali| sudo -S pkill openvpn &"')
     time.sleep(2)
     os.system('/bin/bash -c "echo kali| sudo -S openvpn {} &"'.format(vx[rnd]))
-    time.sleep(10)
+    time.sleep(30)
 
 def main(baseurl):
     print(baseurl)
@@ -186,7 +186,7 @@ def main(baseurl):
         count = count + 1
 
 
-cx()
+cv()
 #xz = input('input city:')
 #input("input yelp search such as cafe:")
 #input("input yelp email to input:")
@@ -208,7 +208,7 @@ for xc in cities:
         f.write(xc+'\n')
         f.close()
         print(xc)
-        cx()
+        cv()
 print("finish")
 
 
