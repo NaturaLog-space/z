@@ -146,11 +146,13 @@ def c(cc,url):
         html = cc.page_source
     return html, cc
 def cx():
+    vx = ["us-orl.prod.surfshark.com_udp.ovpn","us-phx.prod.surfshark.com_tcp.ovpn","us-phx.prod.surfshark.com_udp.ovpn","us-sea.prod.surfshark.com_tcp.ovpn","us-sea.prod.surfshark.com_udp.ovpn","us-sfo.prod.surfshark.com_tcp.ovpn","us-sfo.prod.surfshark.com_udp.ovpn","us-sjc.prod.surfshark.com_tcp.ovpn","us-sjc.prod.surfshark.com_udp.ovpn","us-slc.prod.surfshark.com_tcp.ovpn","us-slc.prod.surfshark.com_udp.ovpn","us-stl.prod.surfshark.com_tcp.ovpn","us-stl.prod.surfshark.com_udp.ovpn","us-tpa.prod.surfshark.com_tcp.ovpn","us-tpa.prod.surfshark.com_udp.ovpn"]
+    rnd = random.randint(0,len(vx)-1)
     os.system("rm -r /tmp/.org.chromium*")
     os.system('/bin/bash -c "echo kali| sudo -S pkill openvpn &"')
     time.sleep(2)
-    os.system('/bin/bash -c "echo kali| sudo -S openvpn us-orl.prod.surfshark.com_udp.ovpn &"')
-    time.sleep(30)
+    os.system('/bin/bash -c "echo kali| sudo -S openvpn {} &"'.format(vx[rnd])
+    time.sleep(10)
 
 def main(baseurl):
     print(baseurl)
