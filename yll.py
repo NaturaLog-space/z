@@ -193,7 +193,7 @@ cv()
 #input("input yelp name to input:")
 # xz = sys.argv[1]
 xy = int(sys.argv[1])
-xzz = [40,80,120,160,200,240,280,320,340,380,420]+xy
+xzz = [40+xy,80+xy,120+xy,160+xy,200+xy,240+xy,280+xy,320+xy,340+xy,380+xy,420+xy]
 for xz in xzz:
   f = open(str(xz)+'.txt',"r")
   cities = f.read().split('\n')
