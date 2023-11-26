@@ -137,8 +137,8 @@ def c(cc,url):
         # options = Options()
         # options.add_argument("--headless=new")
         # cc = webdriver.Chrome(options=options)
+        cx()
         cc = webdriver.Chrome()        
-        # cx()
         # time.sleep(30)
         cc.get(url)
         html = cc.page_source
