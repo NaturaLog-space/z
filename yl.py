@@ -151,7 +151,7 @@ def cx():
     os.system("rm -r /tmp/.org.chromium*")
     os.system('/bin/bash -c "echo kali| sudo -S pkill openvpn &"')
     time.sleep(2)
-    os.system('/bin/bash -c "echo kali| sudo -S openvpn {} &"'.format(vx[rnd])
+    os.system('/bin/bash -c "echo kali| sudo -S openvpn {} &"'.format(vx[rnd]))
     time.sleep(10)
 
 def main(baseurl):
@@ -186,7 +186,7 @@ def main(baseurl):
         count = count + 1
 
 
-os.system('/bin/bash -c "echo kali| sudo -S openvpn us-orl.prod.surfshark.com_udp.ovpn &"')
+cx()
 #xz = input('input city:')
 #input("input yelp search such as cafe:")
 #input("input yelp email to input:")
