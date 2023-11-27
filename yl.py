@@ -15,6 +15,10 @@ import random
 
 def sendmsg(cc,data,words,email,name):
     urls = data['businessUrl']
+    try:
+        rej = cc.find_element(By.ID,"onetrust-reject-all-handler")
+    except:
+        pass
     for x in range(len(urls)):
         print(urls[x])
         cz = True
@@ -133,8 +137,9 @@ def parsemenu(soup):
 def c(cc,url):
     cc.get(url)
     html = cc.page_source
+    err = re.find_all("ERR_TIMED_OUT",html)
     print(len(html))
-    while (len(html)<7000):
+    while (len(html)<7000) or len(err)>0:
         cc.close()
         # options = Options()
         # options.add_argument("--headless=new")
@@ -156,10 +161,6 @@ def cv():
 
 def main(baseurl):
     print(baseurl)
-    lat = 1
-    lon = 2
-    lat1 = 1
-    lon2 = 2
     # os.system("rm -r /tmp/.org.chromium*")
     # os.chdir("b")
     f = open("word.txt")
@@ -193,7 +194,7 @@ cv()
 #input("input yelp name to input:")
 # xz = sys.argv[1]
 xz = sys.argv[1]
-f = open(xz+'.txt',"r")
+f = open(xz + '.txt',"r")
 cities = f.read().split('\n')
 f.close()
 #cities = xz.split("\n")
