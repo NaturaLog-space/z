@@ -73,7 +73,7 @@ def sendmsg(cc,data,words,email,name):
     return data
 
 def sendmsg1(cc,url,words,email,name):
-    cc.get(url)
+#    cc.get(url)
     bn = cc.find_element_by_class_name("css-35w7iu")
     print("msg button field")
     bn.click()
