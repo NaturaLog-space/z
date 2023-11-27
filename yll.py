@@ -15,6 +15,10 @@ import random
 
 def sendmsg(cc,data,words,email,name):
     urls = data['businessUrl']
+    try:
+        rej = cc.find_element(By.ID,"onetrust-reject-all-handler")
+    except:
+        pass
     for x in range(len(urls)):
         print(urls[x])
         cz = True
